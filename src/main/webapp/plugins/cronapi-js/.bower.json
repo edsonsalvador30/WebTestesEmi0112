@@ -1,0 +1,25 @@
+{
+  "name": "cronapi-js",
+  "homepage": "https://github.com/technecloud/cronapi-js",
+  "authors": [
+    "Cronapp <suporte@cronapp.io>"
+  ],
+  "description": "Public library for CronApp's users",
+  "main": "cronapi.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "32dbba4dc0",
+  "_resolution": {
+    "type": "commit",
+    "commit": "32dbba4dc0d0a45759a774679ff634f3d69fbb62"
+  },
+  "_source": "https://github.com/technecloud/cronapi-js.git",
+  "_target": "32dbba4dc0d0a45759a774679ff634f3d69fbb62",
+  "_originalSource": "cronapi-js"
+}

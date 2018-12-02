@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="" resourceType="JAVA" ruleDescription="TesteDS" ruleName="TesteDS" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="385.4000000000002" scrolly="-210.99999999999966" target="jO$?[PLUcFcsIq5?ESj]"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-307" y="218">
+    <field name="NAME">Executar</field>
+    <comment h="80" pinned="false" w="160">TesteDS</comment>
+    <statement name="STACK">
+      <block colour="#5ba58c" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="6NtYNSM~?*eM#P$5XmiF" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
+        <value name="TEXT">
+          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="qxahyKaw]rm=W30LDG7r" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">1</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block colour="#995ba5" id="FlTy]D.|R}O%?{y82By9" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-287" y="258">
+    <field name="NAME">Executar2</field>
+    <comment h="80" pinned="false" w="160">TesteDS</comment>
+    <statement name="STACK">
+      <block colour="#5ba58c" dependencyby="FlTy]D.|R}O%?{y82By9" id="|;-IVB=YeREOw#gB|X|G" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
+        <value name="TEXT">
+          <shadow colour="#5ba593" dependencyby="FlTy]D.|R}O%?{y82By9" id="D8/f)?nh4x7Zo6Intsof" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">2</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block colour="#995ba5" id="Kz.S$J+B).@@VXE-aEUK" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-267" y="298">
+    <field name="NAME">Executar3</field>
+    <comment h="80" pinned="false" w="160">TesteDS</comment>
+    <statement name="STACK">
+      <block colour="#5ba58c" dependencyby="Kz.S$J+B).@@VXE-aEUK" id="Av7VqPUyARcoVyTjf3~X" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
+        <value name="TEXT">
+          <shadow colour="#5ba593" dependencyby="Kz.S$J+B).@@VXE-aEUK" id="nlw%a4Fxg#aS;!!Qw#UQ" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">3</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block colour="#995ba5" id="jO$?[PLUcFcsIq5?ESj]" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-247" y="338">
+    <field name="NAME">Executar4</field>
+    <comment h="80" pinned="false" w="160">TesteDS</comment>
+    <statement name="STACK">
+      <block colour="#5ba58c" dependencyby="jO$?[PLUcFcsIq5?ESj]" id="eme|Kr(DD;%KN_hng5pX" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
+        <value name="TEXT">
+          <shadow colour="#5ba593" dependencyby="jO$?[PLUcFcsIq5?ESj]" id="8gp|mVU$.!dii[eY,#my" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">4</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#5b93a5" dependencyby="jO$?[PLUcFcsIq5?ESj]" id="P60N{epA6XAarv5i^xaI" origintype="text_i18n" output="true" tooltip="function () { [native code] }" type="text_i18n">
+        <mutation data="%7B%22text%22:%22Fazendo%20Pizza%22,%22value%22:%22Fazendo%20Pizza%22,%22token%22:%22i18n.Messages.getString(%5C%22TesteDSBlockly%5C%22)%22,%22key%22:%22TesteDSBlockly%22,%22params%22:%5B%5D%7D" name=""/>
+        <field name="TEXT">Fazendo Pizza</field>
+      </block>
+    </value>
+  </block>
+</blockly>

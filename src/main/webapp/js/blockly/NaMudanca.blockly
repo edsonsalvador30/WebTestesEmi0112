@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="" resourceType="JS" ruleDescription="NaMudanca" ruleName="NaMudanca" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="487.39999999999975" scrolly="-56.500000000000114" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-350" y="130">
+    <field name="NAME">Execute</field>
+    <comment h="80" pinned="false" w="160">NaMudanca</comment>
+    <statement name="STACK">
+      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="w.SBXGzXm7~]%H`Z7Eqk" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EShow%20notification%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20show%20a%20notification%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Notification%20type%20:%20String%3C/span%3E%3Cdiv%3E%20Can%20receive%20values%20success,%20error,%20warning,%20info%20or%20primary%3C/div%3E%3Cspan%3E%20-%20Message%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+        <field name="SELECT">success</field>
+        <value name="MESSAGE">
+          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="6dqP:1e#Hm!wk_BNAbcr" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">Disparou</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</blockly>
