@@ -98,5 +98,6 @@
   "Home.view.NewPasswordCanNotBeEmpty": "Nova senha não pode estar vazio.",
   "Home.view.ConfirmationPasswordCanNotBeEmpty": "Confirmação não pode estar vazio.",
   "DataPagamento": "Data do Pagamento",
-  "NomeCliente": "Nome Cliente"
+  "NomeCliente": "Nome Cliente",
+  "ListaDeEmprestimos": "Lista de Emprestimos"
 }

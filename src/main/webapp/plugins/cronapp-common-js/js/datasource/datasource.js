@@ -1,4 +1,4 @@
-//v2.0.21
+//v2.0.22
 var ISO_PATTERN  = new RegExp("(\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d:[0-5]\\d\\.\\d+([+-][0-2]\\d:[0-5]\\d|Z))|(\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z))|(\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z))");
 var TIME_PATTERN  = new RegExp("PT(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+)(?:\\.(\\d+)?)?S)?");
 var DEP_PATTERN  = new RegExp("\\{\\{(.*?)\\|raw\\}\\}");
@@ -1130,13 +1130,18 @@ angular.module('datasourcejs', [])
                 if (this.isOData()) {
                     suffixPath = "(";
                 }
+                var count = 0;
                 for (var key in keyObj) {
                     if (keyObj.hasOwnProperty(key)) {
                         if (this.isOData()) {
+                            if (count > 0) {
+                                suffixPath += ",";
+                            }
                             suffixPath += key + "=" + this.getObjectAsString(keyObj[key]);
                         } else {
                             suffixPath += "/" + keyObj[key];
                         }
+                        count++;
                     }
                 }
                 if (this.isOData()) {
@@ -2458,7 +2463,11 @@ angular.module('datasourcejs', [])
                                         result += ' ' + oper.toLowerCase() + ' ';
                                     }
 
-                                    result += arg.left + getOperatorODATA(arg.type) + value;
+                                    if (arg.type == '%') {
+                                      result += "substringof("+value.toLowerCase()+", tolower("+arg.left+"))";
+                                    } else {
+                                      result += arg.left + getOperatorODATA(arg.type) + value;
+                                    }
                                 }
                             }
                         }
@@ -2601,27 +2610,35 @@ angular.module('datasourcejs', [])
                         this.loadedFinish = true;
                         this.handleAfterCallBack(this.onAfterFill);
                         var thisDatasourceName = this.name;
-                        $('datasource').each(function(idx, elem) {
+                        if (!this.isOData()) {
+                          $('datasource').each(function (idx, elem) {
                             var dependentBy = null;
                             var dependent = window[elem.getAttribute('name')];
-                            if (dependent && elem.getAttribute('dependent-by') !== "" && elem.getAttribute('dependent-by') != null) {
-                                try {
-                                    dependentBy = JSON.parse(elem.getAttribute('dependent-by'));
-                                } catch (ex) {
-                                    dependentBy = eval(elem.getAttribute('dependent-by'));
-                                }
+                            if (dependent && elem.getAttribute('dependent-by')
+                                !== "" && elem.getAttribute('dependent-by')
+                                != null) {
+                              try {
+                                dependentBy = JSON.parse(
+                                    elem.getAttribute('dependent-by'));
+                              } catch (ex) {
+                                dependentBy = eval(
+                                    elem.getAttribute('dependent-by'));
+                              }
 
-                                if (dependentBy) {
-                                    if (dependentBy.name == thisDatasourceName) {
-                                        if (!dependent.filterURL)
-                                            eval(dependent.name).fetch();
-                                        //if has filter, the filter observer will be called
-                                    }
-                                } else {
-                                    console.log('O dependente ' + elem.getAttribute('dependent-by') + ' do pai ' + thisDatasourceName + ' ainda não existe.')
+                              if (dependentBy) {
+                                if (dependentBy.name == thisDatasourceName) {
+                                  if (!dependent.filterURL)
+                                    eval(dependent.name).fetch();
+                                  //if has filter, the filter observer will be called
                                 }
+                              } else {
+                                console.log('O dependente ' + elem.getAttribute(
+                                    'dependent-by') + ' do pai '
+                                    + thisDatasourceName + ' ainda não existe.')
+                              }
                             }
-                        });
+                          });
+                        }
                     }
                 }.bind(this);
 
